@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobilophilia.masterdairy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.SplashView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.PriceTableActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/tittle_price_table"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.UpdateName"
+            android:configChanges="keyboardHidden"
+            android:label="@string/tittle_update_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.UpdateEntry"
+            android:configChanges="keyboardHidden"
+            android:label="@string/tittle_update_entry"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.UpdateExpense"
+            android:configChanges="keyboardHidden"
+            android:label="@string/tittle_update_expense"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.mobilophilia.masterdairy.activity.UpdateDairyName"
+            android:configChanges="keyboardHidden"
+            android:label="@string/tittle_update_dairy_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f3f447c58b11522fe9574457afd869697b17536c" />
+
+
+    </application>
+
+</manifest>

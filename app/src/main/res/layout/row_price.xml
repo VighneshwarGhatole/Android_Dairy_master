@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_margin_5"
+    android:paddingBottom="@dimen/padding_margin_5"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_margin_5"
+        android:paddingRight="@dimen/padding_margin_5"
+        android:weightSum="8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lv1_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lv1_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lv1_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lv1_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lv1_eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/lv1_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lv1_six"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lv1_seven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_margin_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

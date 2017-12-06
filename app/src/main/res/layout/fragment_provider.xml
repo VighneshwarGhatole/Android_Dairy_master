@@ -1,0 +1,579 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- <android.support.v7.widget.RecyclerView
+         android:id="@+id/recycler_view_provider"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/back_theme"
+         android:scrollbars="vertical" />-->
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/back_theme"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/padding_margin_5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pro_dairy_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_margin_10"
+                    android:text="Kanha Dairy"
+                    android:textColor="@color/my_black"
+                    android:textSize="@dimen/font_size_14" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Avg fat">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_avg_fat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:focusable="false"
+                            android:inputType="numberDecimal"
+
+                            android:editable="false"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Avg snf">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_avg_snf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:focusable="false"
+                            android:inputType="numberDecimal"
+                            android:editable="false"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Avg clr">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_avg_clr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Avg Price">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_avg_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Total Litre">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_total_ltr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Avg amount">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_total_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- //Edit Section-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/padding_margin_20"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <Spinner
+                        android:id="@+id/spinner_add_dairy_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:prompt="@string/hint_type"
+                        android:visibility="gone"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/pro_no_value_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_margin_10"
+                        android:text="Please add dairy details"
+                        android:textColor="@color/my_black"
+                        android:visibility="visible"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_avg_fat">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_input_avg_fat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:inputType="numberDecimal"
+                            android:background="@color/white_to"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_avg_snf">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_input_avg_snf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_avg_price">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_input_avg_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_chilling_ex">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_input_chilling_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:background="@color/white_to"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_other_ex">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_input_other_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:inputType="numberDecimal"
+                            android:background="@color/white_to"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_litre">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_avt_input_ltr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:inputType="numberDecimal"
+                            android:background="@color/white_to"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_margin_5"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/hint_total">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pro_input_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:textColor="@color/my_black"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:background="@color/white_to"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_provider_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/padding_margin_10"
+                        android:layout_marginTop="@dimen/padding_margin_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_blue"
+                        android:text="@string/btn_save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/con_theme"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_av"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_margin_5"
+                android:weightSum="8"
+                android:background="@color/con_theme"
+                android:paddingLeft="@dimen/padding_margin_5"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lv1_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:text="Dairy name"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lv1_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Avg fat"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lv1_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Avg snf"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lv1_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Price"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lv1_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Ltr"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/lv1_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Chilling expense"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lv1_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Other expense"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lv1_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Total"
+                    android:padding="@dimen/padding_margin_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_12"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_entered_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_margin_20"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table_view_added"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
